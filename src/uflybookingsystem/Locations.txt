@@ -1,0 +1,7 @@
+City,Airport Code
+Auckland,AKL
+Wellington,WLG
+Christchurch,CHC
+Queenstown,ZQN
+Dunedin,DUD
+Rotorua,ROT
