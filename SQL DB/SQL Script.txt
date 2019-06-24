@@ -1,0 +1,35 @@
+CREATE TABLE `ufly`.`flight` (
+  `FlightNumber` VARCHAR(10) NOT NULL,
+  `DepartureAirport` VARCHAR(5) NOT NULL,
+  `DestinationAirport` VARCHAR(5) NOT NULL,
+  `Price` DECIMAL(10,2) NOT NULL,
+  `DateTime` DATETIME NOT NULL,
+  `Plane` VARCHAR(20) NOT NULL,
+  `SeatsTaken` INT(11) NOT NULL,
+  PRIMARY KEY (`FlightNumber`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+
+
+
+CREATE TABLE `ufly`.`location` (
+  `City` VARCHAR(45) NOT NULL,
+  `AirportCode` VARCHAR(5) NOT NULL,
+  PRIMARY KEY (`AirportCode`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+CREATE TABLE `ufly`.`booking` (
+  `BookingNumber` INT(11) NOT NULL AUTO_INCREMENT,
+  `FlightNumber` VARCHAR(10) NOT NULL,
+  `Price` DECIMAL(10,2) NOT NULL,
+  `CabinClass` VARCHAR(20) NOT NULL,
+  `Quantity` INT(11) NOT NULL,
+  `Insurance` BIT(1) NOT NULL,
+  PRIMARY KEY (`BookingNumber`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
